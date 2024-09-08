@@ -1,16 +1,48 @@
-# flutter_greenstream_weather
+# Flutter GreenStream Weather
 
-A new Flutter project.
+## Description
+A Flutter application that displays weather information using the GreenStream API.
 
-## Getting Started
+## Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Packages Used](#packages-used)
+- [Contact](#contact)
 
-This project is a starting point for a Flutter application.
+## Prerequisites
+Before you begin, ensure you have the following installed on your machine:
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- [Dart SDK](https://dart.dev/get-dart)
+- An IDE (e.g., Android Studio, Visual Studio Code)
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+Follow these steps to set up the project on your local machine:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. **Clone the repository:**
+   
+   git clone https://github.com/Chnnka/flutter_greenstream_weather.git
+   cd flutter_greenstream_weather
+2. **Add packages:**
+   1. go to pubspec.yaml file
+   2. under dependencies, add the following
+        dependencies:
+            flutter:
+                sdk: flutter
+            http: ^1.2.2
+            intl: ^0.19.0
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+3. **Run the app:**
+    1. Run the following command in your terminal
+        flutter pub get
+    2. Run the app:
+        flutter run
+    
+## Packages Used
+Packages Used
+    http: ^0.13.5 - Used for making HTTP requests to the GreenStream API.
+    intl: ^0.18.0 - Used for formatting dates and times.
+
+## Contact
+For any inquiries, please contact:
+Channaka - channaka.sajith@gmail.com
+GitHub: Chnnka
