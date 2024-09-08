@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter_greenstream_weather/models/current_weather.dart';
 import 'package:flutter_greenstream_weather/models/forecast_model.dart';
 
-import 'constants.dart';
+import 'utils/constants.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherApi {

@@ -11,6 +11,7 @@ class MainWeatherData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentData = response?.current!;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
@@ -21,20 +22,19 @@ class MainWeatherData extends StatelessWidget {
             flex: 2,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
+              children: [
                 Text(
-                  response?.current?.tempC != null
-                      ? '${response?.current?.tempC?.toInt()}°C'
-                      : '',
-                  style: TextStyle(fontSize: 95),
+                  '${currentData?.tempC?.toInt()}°c',
+                  style: const TextStyle(
+                      fontSize: 95, fontWeight: FontWeight.w600),
                 ),
                 Text(
-                  "Feels like ${response?.current?.feelslikeC}",
-                  style: TextStyle(fontSize: 18, color: Colors.grey),
+                  "Feels like ${currentData?.feelslikeC}",
+                  style: const TextStyle(fontSize: 18, color: Colors.grey),
                 ),
                 Text(
-                  response?.current?.condition?.text ?? "",
-                  style: TextStyle(fontSize: 19),
+                  currentData?.condition?.text ?? "",
+                  style: const TextStyle(fontSize: 19),
                 ),
                 Text(
                   response?.location?.name ?? "",
@@ -53,7 +53,7 @@ class MainWeatherData extends StatelessWidget {
               child: SizedBox(
                 height: 200,
                 child: Image.network(
-                  "https:${response?.current?.condition?.icon}",
+                  "https:${currentData?.condition?.icon}",
                   fit: BoxFit.contain,
                   width: double.infinity,
                 ),
